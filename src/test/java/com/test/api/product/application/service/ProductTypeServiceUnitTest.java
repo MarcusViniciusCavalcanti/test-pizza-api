@@ -90,4 +90,9 @@ public class ProductTypeServiceUnitTest {
 
         assertThat(entities.size(), CoreMatchers.is(3));
     }
+
+    @Test(expected = EntityNotFoundException.class)
+    public void should_return_not_found_exception() {
+        var other = productTypeService.getById(ID_NOT_FOUND);
+    }
 }
