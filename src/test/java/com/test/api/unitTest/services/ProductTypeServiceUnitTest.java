@@ -1,6 +1,7 @@
-package com.test.api.product.application.service;
+package com.test.api.unitTest.services;
 
 import com.test.api.product.application.dto.ProductTypeDTO;
+import com.test.api.product.application.service.ProductTypeService;
 import com.test.api.product.domain.entity.ProductType;
 import com.test.api.product.domain.repository.ProductTypeRepository;
 import com.test.api.utils.FactoryObjectsToTest;
