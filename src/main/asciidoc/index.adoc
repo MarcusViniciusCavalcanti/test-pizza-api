@@ -1,0 +1,111 @@
+= Api - Test Pizzaria UDS
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:operation-curl-request-title: Example request
+:operation-http-response-title: Example response
+
+[[overview]]
+= Overview
+
+[[overview-http-verbs]]
+== HTTP Verbs
+
+Esta Api foi construída seguindo os padrões RESTFull, tentando aderir o mais próximo
+possíveis as suas conveções em seu uso dos verbos HTTP
+
+|===
+| Verb | Usage
+
+| `GET`
+| Usado para recuperar recursos
+
+| `POST`
+| Usado para crear um recurso
+
+| `PUT`
+| Usado para atualizar, parcialmente ou completamente.
+
+| `DELETE`
+| Usado para remover um recurso existente.
+|===
+
+[[overview-http-status-codes]]
+== HTTP status codes
+
+Esta Api foi construída seguindo os padrões RESTFull, tentando aderir o mais próximo
+possíveis as suas conveções em seu uso dos códigos de Status HTTP
+
+|===
+| Status code | Usage
+
+| `200 OK`
+| Para requisições aceitas e processadas
+
+| `201 Created`
+| Um novo recurso foi criado com sucesso. O URI do recurso está disponível a partir da resposta
+`Localizaçao` body.link._self.href
+
+| `204 No Content`
+| Requisição foi processada e não há respostas para tal
+
+| `400 Bad Request`
+| Requsição negada, pois está mal formatada, exemplo de retorno de erro quando
+a falta de um atributo.
+
+| `404 Not Found`
+| Este recurso não foi encontrado.
+|===
+
+[[overview-headers]]
+== Headers
+
+Cada resposta tem o(s) seguinte(s) cabeçalho(s):
+
+//include::{snippets}/should_have_correct_headers/response-headers.adoc[]
+
+[[overview-hypermedia]]
+== Hypermedia
+
+Notas RESTful usa hipermídia e recursos incluem links para outros recursos em suas
+respostas. As respostas estão em http://stateless.co/hal_specification.html[Aplicação de hipertexto
+de recurso para recurso.
+Language (HAL)]. Links podem ser encontrados abaixo da chave `_links`. Os usuários da API devem
+não criar URIs, eles devem usar os links acima descritos para navegar.
+
+[[product-types]]
+= ProductsType
+
+[[product-types-overview]]
+== overview
+Objeto que detem o típo de pizzar
+grande, pequena ou média, assim como define o tempo de preparado da pizza
+
+[[products-types-actions]]
+== Operações
+
+[[product-types-actions-get]]
+=== Buscar Todos
+
+Método HTTP `GET` devolve uma lista de objetos ProductType
+
+==== Exemplo de request
+
+include::/Users/vinicius/development/uds/test/test-pizzaria/api/target/generated-snippets/should_return_all_products-type/curl-request.adoc[]
+
+==== Exemplo de resposta
+
+include::/Users/vinicius/development/uds/test/test-pizzaria/api/target/generated-snippets/should_return_all_products-type/response-body.adoc[]
+
+=== Buscar Objeto Específico.
+
+Método HTTP `GET` retorna o objeto a qual corresponde ao ID enviado por parâmetro
+
+
+
+
+
+

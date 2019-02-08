@@ -1,0 +1,10 @@
+language: java
+jdk: openjdk10
+
+before_script:
+  - psql -c "create database americanstore;" -U postgres
+  - sudo -u postgres psql -c "create user application with encrypted password 'americanstore'"
+  - sudo -u postgres psql -c "grant all privileges on database americanstore to application"
+
+services:
+  - postgresql
