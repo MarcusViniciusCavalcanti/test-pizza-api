@@ -1,3 +1,0 @@
-INSERT INTO public.product_type (id, createdat, name, timeprocess, updatedat) VALUES (1, '2019-02-07 14:05:01.971400', 'Pequena', 15, '2019-02-07 14:05:01.971485');
-INSERT INTO public.product_type (id, createdat, name, timeprocess, updatedat) VALUES (2, '2019-02-07 14:05:11.166728', 'Média', 20, '2019-02-07 14:05:11.166768');
-INSERT INTO public.product_type (id, createdat, name, timeprocess, updatedat) VALUES (3, '2019-02-07 14:05:18.231692', 'Grande', 25, '2019-02-07 14:05:18.231723');
