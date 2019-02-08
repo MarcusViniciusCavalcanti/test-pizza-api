@@ -1,0 +1,13 @@
+.DS_Store
+
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+src/main/asciidoc/index.adoc
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
