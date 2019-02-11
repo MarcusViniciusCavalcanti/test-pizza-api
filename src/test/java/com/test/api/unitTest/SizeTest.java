@@ -1,6 +1,6 @@
 package com.test.api.unitTest;
 
-import com.test.api.pizza.domain.entity.size.SizePizza;
+import com.test.api.pizza.domain.valueObject.size.SizePizza;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;

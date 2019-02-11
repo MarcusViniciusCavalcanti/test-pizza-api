@@ -1,4 +1,4 @@
-package com.test.api.unitTest;
+package com.test.api.unitTest.validations;
 
 import com.test.api.order.application.dtos.OrderDTO;
 import com.test.api.order.application.validations.EnumValidator;
@@ -27,6 +27,7 @@ public class SizeValidationTest {
     public void should_have_error_when_size_not_exist() {
         var dto = new OrderDTO();
         dto.setPizzaSize("not_exist");
+        dto.setFlavorId(1);
 
         Set<ConstraintViolation<OrderDTO>> violations = validator.validate(dto);
 
@@ -41,7 +42,7 @@ public class SizeValidationTest {
         Set<ConstraintViolation<OrderDTO>> violations = validator.validate(dto);
 
         assertThat(violations, CoreMatchers.notNullValue());
-        assertThat(violations, hasSize(2));
+        assertThat(violations, hasSize(3));
     }
 
     @Test
@@ -51,8 +52,11 @@ public class SizeValidationTest {
         var bigger = new OrderDTO();
 
         small.setPizzaSize("small");
+        small.setFlavorId(1);
         middle.setPizzaSize("middle");
+        middle.setFlavorId(1);
         bigger.setPizzaSize("bigger");
+        bigger.setFlavorId(1);
 
         Set<ConstraintViolation<OrderDTO>> violationsSmall = validator.validate(small);
         Set<ConstraintViolation<OrderDTO>> violationsMiddle = validator.validate(middle);
