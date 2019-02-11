@@ -1,4 +1,4 @@
-package com.test.api.pizza.domain.entity.size;
+package com.test.api.pizza.domain.valueObject.size;
 
 public class Small implements Size {
 

@@ -65,46 +65,6 @@ a falta de um atributo.
 
 Cada resposta tem o(s) seguinte(s) cabeçalho(s):
 
-//include::{snippets}/should_have_correct_headers/response-headers.adoc[]
-
-[[overview-hypermedia]]
-== Hypermedia
-
-Notas RESTful usa hipermídia e recursos incluem links para outros recursos em suas
-respostas. As respostas estão em http://stateless.co/hal_specification.html[Aplicação de hipertexto
-de recurso para recurso.
-Language (HAL)]. Links podem ser encontrados abaixo da chave `_links`. Os usuários da API devem
-não criar URIs, eles devem usar os links acima descritos para navegar.
-
-[[product-types]]
-= ProductsType
-
-[[product-types-overview]]
-== overview
-Objeto que detem o típo de pizzar
-grande, pequena ou média, assim como define o tempo de preparado da pizza
-
-[[products-types-actions]]
-== Operações
-
-[[product-types-actions-get]]
-=== Buscar Todos
-
-Método HTTP `GET` devolve uma lista de objetos ProductType
-
-==== Exemplo de request
-
-include::/Users/vinicius/development/uds/test/test-pizzaria/api/target/generated-snippets/should_return_all_products-type/curl-request.adoc[]
-
-==== Exemplo de resposta
-
-include::/Users/vinicius/development/uds/test/test-pizzaria/api/target/generated-snippets/should_return_all_products-type/response-body.adoc[]
-
-=== Buscar Objeto Específico.
-
-Método HTTP `GET` retorna o objeto a qual corresponde ao ID enviado por parâmetro
-
-
 
 
 
